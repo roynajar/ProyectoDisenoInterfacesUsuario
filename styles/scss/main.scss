@@ -1,4 +1,3 @@
-/* Archivo principal SCSS que importa los módulos */
-@use 'variables';
-@use 'layout';
-@use 'components';
+@use './variables';
+@use './layout';
+@use './components';

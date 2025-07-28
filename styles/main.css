@@ -1,2 +1,8 @@
-@charset "UTF-8";
-/* Archivo principal SCSS que importa los módulos *//*# sourceMappingURL=main.css.map */
+.test-box {
+  background-color: #2a75bb;
+  color: #1c1c1c;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+}/*# sourceMappingURL=main.css.map */
