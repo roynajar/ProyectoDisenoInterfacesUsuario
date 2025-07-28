@@ -1,0 +1,93 @@
+@use 'variables';
+
+/* ------------------------------------------
+   Estilos de componentes reutilizables
+   ------------------------------------------ */
+
+/* Botones genéricos */
+.button {
+  display: inline-block; // Permite márgenes y paddings
+  padding: variables.$spacing-unit;
+  border: none;
+  border-radius: 0.25rem; // Bordes suaves
+  font-weight: bold;
+  background-color: variables.$color-blue; // Botón primario
+  color: variables.$color-text;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: variables.$color-yellow; // Feedback visual de hover
+    color: variables.$color-background;
+  }
+
+  &:focus-visible {
+    outline: 2px dashed variables.$color-yellow; // Indica enfoque al teclado
+    outline-offset: 0.25rem;
+  }
+
+  &:disabled {
+    background-color: variables.$color-grey-light; // Botón inactivo
+    color: variables.$color-background;
+    cursor: not-allowed;
+  }
+}
+
+/* Campos de entrada de texto */
+.input {
+  padding: variables.$spacing-unit;
+  border: 2px solid variables.$color-grey-light;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  width: 100%;
+  background-color: variables.$color-background;
+  color: variables.$color-text;
+
+  &::placeholder {
+    color: variables.$color-grey-light; // Texto de ejemplo en gris
+  }
+
+  &:focus {
+    border-color: variables.$color-yellow; // Indica foco del usuario
+  }
+
+  &:valid {
+    border-color: variables.$color-blue; // Dato correcto en azul
+  }
+
+  &:invalid {
+    border-color: variables.$color-red; // Dato incorrecto en rojo
+  }
+
+  &:disabled {
+    background-color: variables.$color-grey-light; // Apariencia de desactivado
+    color: variables.$color-background;
+  }
+}
+
+/* Tarjetas que muestran los datos de cada Pokémon */
+.card {
+  background-color: variables.$color-background;
+  border: 1px solid variables.$color-grey-light;
+  border-radius: 0.25rem;
+  padding: variables.$spacing-unit;
+  text-align: center;
+  color: variables.$color-text;
+  margin-bottom: variables.$spacing-unit;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.25rem;
+  }
+
+  h3 {
+    margin-top: variables.$spacing-unit;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+  }
+
+  p {
+    margin-bottom: 0.5rem;
+  }
+}
