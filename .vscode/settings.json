@@ -7,9 +7,9 @@
     }
   ],
   "liveSassCompile.settings.includeItems": [
-    "styles/scss/main.scss"
+    "/styles/scss/main.scss"
   ],
   "liveSassCompile.settings.excludeList": [
-    "**/node_modules/**"
+    "/**/node_modules/**"
   ]
 }
