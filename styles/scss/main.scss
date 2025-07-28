@@ -1,9 +1,4 @@
-@use './variables';
-
-body {
-  background-color: variables.$color-background;
-  color: variables.$color-text;
-  font-family: Arial, sans-serif;
-  padding: 2rem;
-  margin: 0;
-}
+/* Archivo principal SCSS que importa los módulos */
+@use 'variables';
+@use 'layout';
+@use 'components';

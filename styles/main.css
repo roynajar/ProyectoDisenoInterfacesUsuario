@@ -1,8 +1,2 @@
-/* Paleta de colores accesibles */
-body {
-  background-color: #1c1c1c;
-  color: #ffffff;
-  font-family: Arial, sans-serif;
-  padding: 2rem;
-  margin: 0;
-}/*# sourceMappingURL=main.css.map */
+@charset "UTF-8";
+/* Archivo principal SCSS que importa los módulos *//*# sourceMappingURL=main.css.map */
