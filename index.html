@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokédex Accesible</title>
+  <!-- Hoja de estilos generada a partir de los archivos SCSS -->
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+  <!-- Encabezado principal con título y navegación -->
+  <header role="banner">
+    <h1>Pokédex Accesible</h1>
+    <nav role="navigation">
+      <ul>
+        <li><a href="#" aria-label="Ir a inicio">Inicio</a></li>
+        <li><a href="#" aria-label="Ir a Pokédex">Pokédex</a></li>
+        <li><a href="#" aria-label="Ir a contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+    <!-- Formulario de búsqueda accesible -->
+    <form aria-label="Buscador de Pokémon ficticio">
+      <label for="search">Busca tu Pokémon</label>
+      <!-- Campo principal con placeholder, required y autofocus -->
+      <input class="input" type="text" id="search" name="search" placeholder="Nombre de Pokémon" required autofocus aria-required="true">
+      <!-- Campo solo lectura para mostrar la región actual -->
+      <input class="input" type="text" value="Región Kanto" readonly aria-label="Región actual">
+      <!-- Botón de envío principal -->
+      <button class="button" type="submit">Buscar</button>
+      <!-- Botón deshabilitado como ejemplo de atributo disabled -->
+      <button class="button" type="button" disabled aria-label="Botón inactivo">Próximamente</button>
+      <!-- Mensaje de retroalimentación que se muestra al validar correctamente -->
+      <p class="success-message" role="status" aria-live="polite">¡Búsqueda realizada con éxito!</p>
+    </form>
+
+    <!-- Tarjetas con información de Pokémon ficticios -->
+    <section class="cards-container">
+      <article class="card">
+        <img src="https://via.placeholder.com/150" alt="Imagen de Electrowl, Pokémon ficticio de tipo eléctrico">
+        <h3>Electrowl</h3>
+        <p><strong>Tipo:</strong> Eléctrico</p>
+        <p><strong>Habilidades:</strong> Descarga, Ojo agudo</p>
+      </article>
+
+      <article class="card">
+        <img src="https://via.placeholder.com/150" alt="Imagen de Aquabeet, Pokémon ficticio de tipo agua">
+        <h3>Aquabeet</h3>
+        <p><strong>Tipo:</strong> Agua</p>
+        <p><strong>Habilidades:</strong> Torrente, Caparazón</p>
+      </article>
+
+      <article class="card">
+        <img src="https://via.placeholder.com/150" alt="Imagen de Pyronyx, Pokémon ficticio de tipo fuego">
+        <h3>Pyronyx</h3>
+        <p><strong>Tipo:</strong> Fuego</p>
+        <p><strong>Habilidades:</strong> Mar llamas, Ignífugo</p>
+      </article>
+    </section>
+  </main>
+
+  <!-- Pie de página con créditos -->
+  <footer>
+    <p>Proyecto de interfaz accesible basado en Pokémon.</p>
+    <p><a href="https://github.com/usuario" aria-label="Enlace al repositorio de GitHub">GitHub</a></p>
+  </footer>
+
+</body>
+</html>

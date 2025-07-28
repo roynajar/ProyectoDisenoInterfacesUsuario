@@ -1,0 +1,105 @@
+@use 'variables';
+
+/* ------------------------------------------
+   Estilos generales y estructura del sitio
+   ------------------------------------------ */
+
+/* Ajustes globales de box-sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Estilos de cuerpo del documento */
+body {
+  font-family: variables.$font-stack;
+  margin: 0;
+  background-color: variables.$color-background;
+  color: variables.$color-text;
+  line-height: 1.5;
+}
+
+/* Encabezado y pie de página con color consistente */
+header,
+footer {
+  background-color: variables.$color-blue; // Misma tonalidad para coherencia
+  padding: variables.$spacing-unit;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* Navegación principal */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: variables.$spacing-unit 0;
+  display: flex;
+  justify-content: center;
+  gap: variables.$spacing-unit;
+}
+
+nav a {
+  color: variables.$color-text;
+  text-decoration: none;
+  padding: variables.$spacing-unit / 2;
+  border-radius: 0.25rem;
+
+  &:hover,
+  &:focus-visible {
+    background-color: variables.$color-yellow; // Indica elemento activo
+    color: variables.$color-background;
+  }
+}
+
+/* Contenido principal */
+main {
+  padding: variables.$spacing-unit;
+}
+
+/* Formulario centrado */
+form {
+  margin-bottom: variables.$spacing-unit;
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-unit;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .success-message {
+    display: none; // Aparece solo si el input es válido
+    color: variables.$color-blue;
+    font-weight: bold;
+  }
+
+  input:valid + .success-message {
+    display: block; // Se muestra sin necesidad de JavaScript
+  }
+}
+
+/* Contenedor de tarjetas */
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: variables.$spacing-unit;
+}
+
+/* Texto del pie de página */
+footer p {
+  margin: 0.5rem 0;
+}
+
+/* --------- Media query para pantallas amplias --------- */
+@media (min-width: 600px) {
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .cards-container {
+    grid-template-columns: repeat(3, 1fr); // Tres columnas en escritorio
+  }
+}

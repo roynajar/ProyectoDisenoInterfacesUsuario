@@ -1,0 +1,17 @@
+/* ------------------------------------------
+   Variables globales de la Pokédex accesible
+   ------------------------------------------ */
+
+/* Paleta de colores con contraste AA */
+$color-background: #1c1c1c; // Fondo principal oscuro
+$color-text: #ffffff;        // Texto claro para buen contraste
+$color-red: #e60012;         // Rojo para errores y botones de alerta
+$color-yellow: #fbd743;      // Amarillo para estados de hover/focus
+$color-blue: #2a75bb;        // Azul marino para acciones primarias
+$color-grey-light: #e0e0e0;  // Gris suave para bordes y fondos
+
+/* Fuente base legible */
+$font-stack: 'Arial', sans-serif;
+
+/* Unidad de espaciado estándar */
+$spacing-unit: 1rem;
