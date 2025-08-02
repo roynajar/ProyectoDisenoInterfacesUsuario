@@ -11,5 +11,6 @@
   ],
   "liveSassCompile.settings.excludeList": [
     "/**/node_modules/**"
-  ]
+  ],
+  "liveServer.settings.port": 5501
 }
